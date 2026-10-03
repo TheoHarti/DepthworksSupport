@@ -32,37 +32,13 @@ separate submissions; the policy URL does not fill them out automatically.
 
 ## AdMob app-ads.txt
 
-`docs/app-ads.txt` authorizes Google's ad exchange for the AdMob publisher used
-by both the Android and iOS apps:
-
-```text
-google.com, pub-2111037597422722, DIRECT, f08c47fec0942fa0
-```
-
-This repository's Pages deployment publishes it at
-https://theoharti.github.io/DepthworksSupport/app-ads.txt. AdMob checks the root
-of the developer website's hostname, so it needs the same file at
-https://theoharti.github.io/app-ads.txt.
-
-The root URL is served by a separate public GitHub Pages repository named
-`TheoHarti/theoharti.github.io`. A ready-to-publish checkout is prepared in
-`C:\Projects\Private\theoharti.github.io`, containing the same `app-ads.txt` and
-a home page that directs visitors to this support site. Publish that repository
-using **Settings → Pages → Deploy from a branch → main → /(root)**. Keep both
-copies of `app-ads.txt` in sync if the publisher or authorized ad networks change.
-The privacy policy and support URLs above continue to use this repository.
-
-For store verification, use the support URL as the developer website in Google
-Play and the marketing URL in App Store Connect. After linking the published
-store entries in AdMob, use **Apps → View all apps → app-ads.txt → Check for
-updates**, then complete app verification. The file authorizes mobile app ads;
-the support website itself does not display ads.
-
-References:
-
-- [Google: set up app-ads.txt](https://support.google.com/admob/answer/9363762?hl=en)
-- [Google: verify an app](https://support.google.com/admob/answer/14538460?hl=en)
-- [GitHub Pages user sites](https://docs.github.com/en/pages/quickstart)
+The shared mobile advertising authorization file is maintained separately in
+[TheoHarti/theoharti.github.io](https://github.com/TheoHarti/theoharti.github.io)
+and published at https://theoharti.github.io/app-ads.txt. That repository contains
+the file and its publishing instructions for apps using the FindusLab AdMob
+publisher account. This repository contains Depthworks' support and privacy
+pages. See [Google's app-ads.txt guide](https://support.google.com/admob/answer/9363762?hl=en)
+for the store website fields and verification steps.
 
 ## Maintain the policy
 
