@@ -1,0 +1,114 @@
+:root {
+  color-scheme: light;
+  --ink: #29251f;
+  --muted: #686054;
+  --paper: #faf7f1;
+  --panel: #fffdf8;
+  --line: #e5dccd;
+  --copper: #87502b;
+  --dark: #211d1a;
+}
+* { box-sizing: border-box; }
+html { scroll-padding-top: 24px; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  -webkit-text-size-adjust: 100%;
+}
+a { color: var(--copper); text-underline-offset: .2em; overflow-wrap: anywhere; }
+a:hover { text-decoration-thickness: 2px; }
+a:focus-visible { outline: 3px solid #c89158; outline-offset: 5px; border-radius: 2px; }
+img { max-width: 100%; }
+h1, h2 { line-height: 1.2; letter-spacing: -.025em; }
+h1 { font-size: clamp(2.2rem, 5vw, 3.75rem); font-weight: 750; margin: 0 0 20px; }
+h2 { font-size: 1.35rem; margin: 0 0 16px; }
+p { margin: 0 0 18px; }
+p:last-child { margin-bottom: 0; }
+.skip-link { position: absolute; left: 16px; top: -100px; padding: 12px 20px; background: white; z-index: 2; }
+.skip-link:focus { top: 12px; }
+.site-header { background: var(--dark); color: #ead7bb; }
+.header-inner {
+  max-width: 1140px;
+  margin: auto;
+  padding: 22px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+}
+.brand { display: flex; align-items: center; gap: 12px; color: #f2e6d3; text-decoration: none; font-size: 1.125rem; font-weight: 750; line-height: 1.3; }
+.brand small { display: block; color: #bbae9b; font-size: .7rem; font-weight: 400; letter-spacing: .055em; margin-top: 3px; }
+.header-inner nav { display: flex; gap: 26px; font-size: .875rem; }
+.header-inner nav a { color: #e1d4bf; text-decoration: none; padding-block: 6px; }
+.header-inner nav a[aria-current] { color: #f6e7ce; border-bottom: 2px solid #c89158; }
+.support-main, .policy-main { max-width: 1140px; margin: auto; padding: 64px 32px 80px; }
+.eyebrow { color: var(--copper); text-transform: uppercase; letter-spacing: .11em; font-weight: 750; font-size: .72rem; margin-bottom: 18px; }
+.lead { color: var(--muted); font-size: 1.15rem; line-height: 1.7; max-width: 720px; }
+.intro { max-width: 760px; padding-bottom: 52px; }
+.button { display: inline-flex; align-items: center; gap: 28px; padding: 12px 20px; margin-top: 14px; background: var(--dark); color: #f4e3c8; text-decoration: none; border-radius: 7px; font-weight: 650; }
+.button:hover { background: #383027; }
+.contact-note { color: var(--muted); font-size: .85rem; margin-top: 16px; }
+.help-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.help-card { padding: 30px; border: 1px solid var(--line); border-radius: 9px; background: var(--panel); }
+.card-number { display: block; font-size: .75rem; font-weight: 750; letter-spacing: .1em; color: var(--copper); margin-bottom: 22px; }
+.help-card p, .contact-panel p { color: var(--muted); font-size: .95rem; }
+.help-card strong { color: var(--ink); font-weight: 650; }
+.contact-panel { margin-top: 36px; padding: 30px; background: #eee6d9; border-radius: 9px; }
+.contact-panel p { max-width: 740px; }
+.contact-panel a { font-weight: 650; }
+.policy-heading { padding-bottom: 40px; margin-bottom: 36px; border-bottom: 1px solid var(--line); }
+.policy-date { font-size: .85rem; color: var(--muted); margin-bottom: 22px; }
+.policy-layout { display: grid; grid-template-columns: 225px minmax(0, 1fr); gap: 56px; align-items: start; }
+.contents { position: sticky; top: 24px; padding-right: 20px; }
+.contents h2 { font-size: .7rem; color: var(--muted); text-transform: uppercase; letter-spacing: .1em; font-weight: 750; }
+.contents ol { list-style: none; padding: 0; margin: 0; font-size: .8rem; line-height: 1.5; }
+.contents li + li { margin-top: 10px; }
+.contents a { color: var(--muted); text-decoration: none; display: block; padding-block: 2px; }
+.contents a:hover { color: var(--copper); text-decoration: underline; }
+.policy-body section { scroll-margin-top: 24px; }
+.policy-body section + section { margin-top: 38px; padding-top: 32px; border-top: 1px solid var(--line); }
+.policy-body p, .policy-body li { font-size: .95rem; }
+.policy-body ul { padding-left: 24px; margin: 0 0 20px; }
+.policy-body li + li { margin-top: 10px; }
+.policy-body strong { font-weight: 650; }
+.policy-contact { border-left: 3px solid #c89158; background: #eee6d9; padding: 22px 24px; border-radius: 0 6px 6px 0; }
+.site-footer { border-top: 1px solid var(--line); color: var(--muted); font-size: .8rem; }
+.site-footer > div { max-width: 1140px; margin: auto; padding: 26px 32px; display: flex; flex-wrap: wrap; gap: 12px 26px; }
+.site-footer span { margin-right: auto; }
+@media (max-width: 800px) {
+  .policy-layout { grid-template-columns: 1fr; gap: 34px; }
+  .contents { position: static; background: #eee6d9; padding: 22px; border-radius: 8px; }
+  .contents ol { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px 20px; }
+  .contents li + li { margin-top: 0; }
+}
+@media (max-width: 540px) {
+  .header-inner { padding: 18px 20px; gap: 16px; flex-wrap: wrap; }
+  .header-inner nav { gap: 20px; }
+  .brand { font-size: 1rem; }
+  .support-main, .policy-main { padding: 40px 20px 56px; }
+  .intro { padding-bottom: 32px; }
+  .lead { font-size: 1.05rem; }
+  .help-grid { grid-template-columns: 1fr; gap: 16px; }
+  .help-card, .contact-panel { padding: 24px; }
+  .policy-heading { padding-bottom: 26px; margin-bottom: 26px; }
+  .policy-body h2 { font-size: 1.25rem; }
+  .contents ol { font-size: .75rem; column-gap: 12px; }
+  .policy-contact { padding: 20px; }
+  .site-footer > div { padding: 24px 20px; }
+  .site-footer span { flex-basis: 100%; }
+}
+@media print {
+  body { background: white; font-size: 11pt; }
+  .site-header, .site-footer, .contents, .skip-link { display: none; }
+  .policy-main { max-width: none; padding: 0; }
+  .policy-layout { display: block; }
+  .policy-heading { padding-bottom: 16px; margin-bottom: 24px; }
+  h1 { font-size: 26pt; }
+  h2 { break-after: avoid; }
+  p, li { orphans: 3; widows: 3; }
+  .policy-contact { background: none; border: 1px solid #aaa; }
+}
